@@ -4,35 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image Gallery</title>
 
-    <!-- Підключаємо стилі бібліотеки basicLightbox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <!-- Підключення CSS для галереї -->
+    <link rel="stylesheet" href="./styles.css">
 
-    <!-- Підключаємо власний файл стилів -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Підключення бібліотеки basicLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
 </head>
 
 <body>
-    <div class="gallery">
-        <!-- Твої зображення галереї -->
-        <a href="#" class="gallery__link">
-            <img src="image1.jpg" alt="Image 1" class="gallery__image">
-        </a>
-        <a href="#" class="gallery__link">
-            <img src="image2.jpg" alt="Image 2" class="gallery__image">
-        </a>
-        <a href="#" class="gallery__link">
-            <img src="image3.jpg" alt="Image 3" class="gallery__image">
-        </a>
-    </div>
+    <ul class="gallery"></ul>
 
-    <!-- Підключаємо бібліотеку basicLightbox -->
+    <!-- Підключення бібліотеки basicLightbox -->
     <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
 
-    <!-- Підключаємо власний файл JavaScript -->
-    <script src="gallery.js"></script>
+    <!-- Підключення JavaScript файлу для галереї -->
+    <script src="./js/gallery.js"></script>
 </body>
 
 </html>
