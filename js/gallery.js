@@ -23,48 +23,47 @@ const images = [
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/15/18/59/port-4203487__340.jpg',
+      'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/15/18/59/port-4203487_1280.jpg',
-    description: 'Container Ship',
+      'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
+    description: 'Flower Blooms',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/16/23/35/sunset-4209230__340.jpg',
+      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/16/23/35/sunset-4209230_1280.jpg',
-    description: 'Sunset Sky',
+      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
+    description: 'Alpine Mountains',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/17/04/33/mountain-4210579__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/17/04/33/mountain-4210579_1280.jpg',
-    description: 'Mountain Peaks',
+      'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg',
+    description: 'Mountain Lake Sailing',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/16/13/07/tree-4207431__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/16/13/07/tree-4207431_1280.jpg',
-    description: 'Green Tree',
+      'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
+    description: 'Alpine Spring Meadows',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/17/12/22/river-4211426__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/17/12/22/river-4211426_1280.jpg',
-    description: 'River in Forest',
+      'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
+    description: 'Nature Landscape',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/15/10/33/flower-4202983__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/15/10/33/flower-4202983_1280.jpg',
-    description: 'Pink Flowers',
-  },
+      'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
+    description: 'Lighthouse Coast Sea',
+  }
 ];
-
 
 const galleryContainer = document.querySelector('.gallery');
 
@@ -86,27 +85,3 @@ const galleryMarkup = images.map(({ preview, original, description }) => {
 
 
 galleryContainer.innerHTML = galleryMarkup;
-
-
-function openModal(imageURL) {
-  const instance = basicLightbox.create(`
-    <img src="${imageURL}" width="800" height="600">
-  `);
-  instance.show();
-}
-
-
-galleryContainer.addEventListener('click', onGalleryClick);
-
-function onGalleryClick(event) {
-  event.preventDefault(); 
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-
-  
-  const largeImageURL = event.target.dataset.source;
-
-  
-  openModal(largeImageURL);
-}
